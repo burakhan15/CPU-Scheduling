@@ -46,7 +46,7 @@ int accept(processes P[]){
 	return n;
 }
 
-// FCFS Algorithm
+// First Come First Served Algorithm
 void FCFS(processes P[],int n){
 	processes temp[10];
 	int sumw=0,sumt=0;
@@ -91,7 +91,7 @@ void FCFS(processes P[],int n){
 }
 
 
-//SJF Non Pre-emptive
+//Shortest Job First Non Pre-emptive
 void SJF_NP(processes P[],int n){
 	processes temp[10];
 	processes t;
@@ -302,7 +302,7 @@ void SJF_P(processes P[],int n){
 	printf("\n\n Average waiting time = %0.2f\n Average turn-around = %0.2f.",avgwt,avgta);
 }
 
-
+//Priority Pre-emptive
 void PRT_P(processes P[],int n){
 	int i,t_total=0,tcurr,b[10],j,x,min_pr;
 	int sumw=0,sumt=0;
@@ -367,9 +367,9 @@ int main(){
 		printf("\n\n SIMULATION OF CPU SCHEDULING ALGORITHMS\n");
 		printf("\n Options:");
 		printf("\n 0. Enter process data.");
-		printf("\n 1. FCFS");
-		printf("\n 2. SJF (Pre-emptive)");
-		printf("\n 3. SJF (Non Pre-emptive)");
+		printf("\n 1. First Come First Served");
+		printf("\n 2. Short Job First (Pre-emptive)");
+		printf("\n 3. Short Job First (Non Pre-emptive)");
 		printf("\n 4. Priority Scheduling (Pre-emptive)");
 		printf("\n 5. Priority Scheduling (Non Pre-emptive)");
 		printf("\n 6. Round Robin");
@@ -400,6 +400,6 @@ int main(){
 			case 7:exit(0);	
 		}
 	}while(ch != 7);
-	getch();
+	
 	return 0;
 }
